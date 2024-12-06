@@ -1,0 +1,367 @@
+{
+  "banner": [
+    {
+      "id": "1",
+      "imageUrl": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/07/banner-2-2048x682.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": "M001",
+      "category": "men",
+      "subcategory": "Áo sơ mi",
+      "name": "Áo sơ mi nam tay dài giấu khuy FASHION form rộng",
+      "description": "Phong cách: sang trọng, thanh lịch, Hàn Quốc, cổ điển, đường phố. Mùa: Mùa thu, Mùa xuân, Mùa hè, Mùa đông. Chiều dài tay áo: Dài tay. Đường viền cổ áo: Cổ bẻ. Họa tiết: Đơn giản. Chất liệu: Lụa.",
+      "price": 168000,
+      "sale_price": 0,
+      "stock": 400,
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "color": [
+        "Trắng",
+        "Đen",
+        "Xanh",
+        "Xám"
+      ],
+      "image_url": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/06/somi.jpg"
+    },
+    {
+      "id": "M002",
+      "category": "men",
+      "subcategory": "Áo khoác & Áo len",
+      "name": "Áo len nam cổ 3p vạt chéo phối màu phong cách Hàn Quốc",
+      "description": "Chiều dài tay áo: Dài tay. Đường viền cổ áo: Cổ lọ. Họa tiết: Đơn giản. Chất liệu: Viscose.",
+      "price": 300000,
+      "sale_price": 0,
+      "stock": 400,
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Xám",
+        "Đen",
+        "Than"
+      ],
+      "image_url": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/06/aolen.jpg"
+    },
+    {
+      "id": "M003",
+      "category": "men",
+      "subcategory": "Áo thun",
+      "name": "Áo thun Raglan cổ tròn phối tay in logo 1969STUDIO form rộng",
+      "description": "Tên sản phẩm: Áo Thun Raglan Cổ Tròn Phối Tay In Logo 1969STUDIO Form Rộng Tay Lỡ Unisex Thời Trang Nam Nữ - Áo Thun, Áo Phông Unisex tay lỡ là item không thể thiếu trong tủ đồ vì sự thoải mái, dễ chịu, lại rất dễ phối đồ. Áo tay lỡ được làm bằng chất liệu co giãn, cực kì đẹp, vải rất mát, sờ mịn tay. Áo thun tay lỡ unisex thích hợp với cả nam và nữ. Mặc làm áo thun cặp, áo nhóm rất phù hợp. Áo thun tay lỡ form rộng dễ dàng phối đồ, thời trang phong cách Hàn Quốc. Hàng sản xuất tại xưởng, đảm bảo chất lượng. Chất liệu: thun co giãn, vải mềm, vải mịn, thoáng mát. Đường may chuẩn chỉnh, tỉ mỉ, chắc chắn. Phù hợp phối nhiều màu. Thiết kế trẻ trung, năng động.",
+      "price": 56000,
+      "sale_price": 0,
+      "stock": 400,
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Trắng tay đen",
+        "Xám tay đen",
+        "Trắng tay xám xanh"
+      ],
+      "image_url": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/06/ao_thun_nam_2.jpg"
+    },
+    {
+      "id": "M004",
+      "category": "men",
+      "subcategory": "Áo thun",
+      "name": "Áo thun cặp đôi unisex form rộng mẫu Kip Meello mùa hè",
+      "description": "Áo thun cặp đôi unisex form rộng mẫu Kip Meello mùa hè in chữ thời trang phong cách Hàn Quốc. Size XS dưới 20 kg mặc. Size S: < 40kg chiều cao phù hợp từ 1m5 đến 1m6. Size M: < 50kg chiều cao phù hợp từ 1m5 đến 1m65. Size L: < 60kg chiều cao phù hợp từ 1m5 đến 1m7. Size XL: 60kg > 68kg chiều cao phù hợp từ 1m7 đến 1m75. Size XXL: 68kg > 80kg chiều cao phù hợp từ 1m75 đến 1m80",
+      "price": 50000,
+      "sale_price": 0,
+      "stock": 100,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "color": [
+        "Trắng",
+        "Đen"
+      ],
+      "image_url": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/06/aothunMeello1_4.jpg"
+    },
+    {
+      "id": "M005",
+      "category": "men",
+      "subcategory": "Quần jean",
+      "name": "Quần jean nam baggy ống suông rộng xu hướng hottrend 2023",
+      "description": "Chiều dài lai: Dài thân người. Chiều cao vòng eo: Eo giữa. Vừa vặn: Vừa vặn. Phong cách: Hàn Quốc, đường phố. Mùa: Mùa hè. Dịp: Thông thường. Họa tiết: Đơn giản. Chất liệu: jean",
+      "price": 164000,
+      "sale_price": 0,
+      "stock": 100,
+      "size": [
+        "28",
+        "29",
+        "30",
+        "31"
+      ],
+      "color": [
+        "Xanh",
+        "Xanh đậm",
+        "Đen"
+      ],
+      "image_url": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/06/jeannam2.jpg"
+    },
+    {
+      "id": "M006",
+      "category": "men",
+      "subcategory": "Áo sơ mi",
+      "name": "Áo sơ mi nam chất kate lụa cao cấp Hàn Quốc phong cách mới",
+      "description": "Áo sơ mi nam cổ vest DOLARO chất lụa mango trơn mượt, thoáng mát kèm họa tiết thêu chữ thời trang. Chất liệu: Áo sơ mi nữ tay ngắn local brand DOLARO họa tiết thêu vải mango mềm cao cấp, đứng dáng, dày dặn, chống nhăn hiệu quả. Kiểu dáng: Áo sơ mi nam tay ngắn cổ Đức (Loại cổ nguyên bản dành cho sơ mi), Áo sơ mi kiểu. Màu sắc: áo sơ mi nam có các màu: Đen - xanh rêu. Đặc tính Áo sơ mi nam tay ngắn vải mềm mịn, thấm hút mồ hôi và cách nhiệt tốt, hạn chế nhăn. Áo sơ mi tay ngắn phong cách thanh lịch, trẻ trung, hiện đại. Size áo đôi local brand: M,L,XL < 75kg",
+      "price": 90000,
+      "sale_price": 0,
+      "stock": 100,
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "color": [
+        "Đen",
+        "Xanh"
+      ],
+      "image_url": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/06/sominam1.jpg"
+    },
+    {
+      "id": "W001",
+      "category": "women",
+      "subcategory": "Váy",
+      "name": "Váy babydoll màu trắng tay phồng dáng dài siêu xinh",
+      "description": "Chiều dài váy: Maxi. Màu: Trắng. Kích cỡ: L - M - S - XL",
+      "price": 139000,
+      "sale_price": 0,
+      "stock": 50,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Trắng"
+      ],
+      "image_url": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/06/babydoll.jpg"
+    },
+    {
+      "id": "W002",
+      "category": "women",
+      "subcategory": "Đầm",
+      "name": "Đầm dự tiệc dáng xòe tay phồng xếp ly ngực sang trọng",
+      "description": "Size: S - M - L. Chất liệu vải: Dày 2 lớp. Form dáng: Sang trọng phù hợp đi tiệc, đi chơi. Màu: Trắng xám và xanh min",
+      "price": 209000,
+      "sale_price": 0,
+      "stock": 50,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "color": [
+        "Trắng xám",
+        "Xanh min"
+      ],
+      "image_url": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/06/vay1.jpg"
+    },
+    {
+      "id": "W003",
+      "category": "women",
+      "subcategory": "Đầm",
+      "name": "Đầm công chúa tay phồng (tặng kèm 3 nơ) họa tiết đơn giản",
+      "description": "Màu: Trắng. Chiều dài váy: Ngang gối. Loại tay áo: Tay phồng. Họa tiết: Đơn giản. Vải: Voan. Size S eo < 68 cm, vòng 1 - 86 cm. Size M eo < 72 cm, vòng 1 - 86 cm",
+      "price": 210000,
+      "sale_price": 0,
+      "stock": 50,
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "Trắng"
+      ],
+      "image_url": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/06/vaytrang1.jpg"
+    },
+    {
+      "id": "W004",
+      "category": "women",
+      "subcategory": "Váy tình yêu",
+      "name": "Váy tình yêu đầu tiên phong cách Nhật Bản, ánh trăng trắng",
+      "description": "Chiều dài váy: Chân váy giữa. Phong cách: Kẹo, Office Lady, Chân váy chữ A. Mùa: Mùa hè. Chiều dài tay áo: Ngắn tay. Đường viền cổ áo: Cổ vuông. Chất liệu: Polyester",
+      "price": 235769,
+      "sale_price": 200000,
+      "stock": 50,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "color": [
+        "Trắng"
+      ],
+      "image_url": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/06/vaytinhyeu.jpg"
+    },
+    {
+      "id": "W005",
+      "category": "women",
+      "subcategory": "Áo khoác",
+      "name": "Áo khoác cadigan chất nỉ bông nữ unisex tay bồng",
+      "description": "Họa tiết: in. Chất liệu: nỉ. Các bạn mua sản phẩm về giặt thoái mái nha đảm bảo 100% không bị mất form và không bai không xù ạ. Mọi người có thể mặc đi chơi, mặc ở nhà hoặc mặc đi dạo phố đều đẹp nha",
+      "price": 89000,
+      "sale_price": 0,
+      "stock": 50,
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Xanh",
+        "Hồng"
+      ],
+      "image_url": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/06/khoac_nu2.jpg"
+    },
+    {
+      "id": "W006",
+      "category": "women",
+      "subcategory": "Áo sơ mi",
+      "name": "Áo sơ mi nữ form rộng dài tay công sở chất xốp kẻ sọc",
+      "description": "Tên sản phẩm: Áo Sơ Mi nữ form rộng Dài Tay Công Sở Chất Xốp Kẻ Sọc dễ mặc 3 màu phong cách Hàn Quốc Kozoda SM85. Màu sắc: kẻ cam, kẻ tím, kẻ xanh dương. Freesize từ 48kg-65kg mang thoải mái. Số đo cụ thể: Dài áo: 74cm. Ngang thân: 60cm (x2 ra chu vi). Vai áo: 67cm. Tay áo: 56cm. Form RỘNG nha các nàng.",
+      "price": 180000,
+      "sale_price": 99000,
+      "stock": 50,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "color": [
+        "Xanh da trời",
+        "Tím",
+        "Cam"
+      ],
+      "image_url": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/06/aosominu1-1.jpg"
+    },
+    {
+      "id": "A001",
+      "category": "accessory",
+      "subcategory": "Giày thể thao",
+      "name": "Giày nam mẫu mới kiểu dáng 2024 thời trang trẻ trung",
+      "description": "Thương hiệu: No Brand. Trọng lượng: 850g. Kiểu dáng: Năng động, phóng khoáng, trẻ trung. Chất liệu: Sử dụng da PU cao cấp. Đế giày: Chất liệu cao su, tạo vân chống trơn trượt và tăng độ ma sát. Lót giày thông hơi, thoáng khí đi cực êm chân. Nơi sản xuất: Trung Quốc. From giày: Chuẩn. Size: 39-44",
+      "price": 168000,
+      "sale_price": 0,
+      "stock": 200,
+      "size": [
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "color": [
+        "Xanh",
+        "Xám"
+      ],
+      "image_url": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/06/giay-1.jpg"
+    },
+    {
+      "id": "A002",
+      "category": "accessory",
+      "subcategory": "Túi đeo chéo",
+      "name": "Túi đeo chéo vải canvas đi học đi chơi cỡ lớn phong cách Hàn Quốc size to",
+      "description": "Chất liệu: Polyester. Đặc điểm: Chống thấm nước. Loại quai: Quai có thể điều chỉnh. Loại túi: Túi Messenger. Loại buộc: Khóa kéo. Hướng dẫn giặt: Chỉ giặt tay. Phong cách: Sang trọng. Dịp: Kinh doanh. Họa tiết: Đồ họa. Loại bảo hành: Không bảo hành",
+      "price": 94000,
+      "sale_price": 0,
+      "stock": 200,
+      "size": [],
+      "color": [
+        "Kem",
+        "Đen"
+      ],
+      "image_url": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/06/tui_vai_canvas4.jpg"
+    },
+    {
+      "id": "A003",
+      "category": "accessory",
+      "subcategory": "Dép thời trang",
+      "name": "Dép nữ, dép bánh mì cao 5cm, dép nữ quai ngang độn đế siêu hot",
+      "description": "Dép thời trang nam nữ chất liệu EVA. Dép nữ hàng loại 1 chuẩn cao 5cm (cam kết không chuẩn hoàn tiền). Dép quai lồi nữ đầy đủ size từ 36 đến 40. Hàng chất lượng không bán hàng rẻ kém chất lượng. Kiểu dáng ôm chân, thon gọn, thoải mái di chuyển mà không lo đau chân. Gửi khách xem mẫu giày hiện có. Tư vấn các mẫu giày phù hợp với khách hàng Chúng tôi mong muốn bạn hạnh phúc khi mua hàng!",
+      "price": 65000,
+      "sale_price": 0,
+      "stock": 200,
+      "size": [
+        "36",
+        "37",
+        "38",
+        "39",
+        "40"
+      ],
+      "color": [
+        "Kem",
+        "Đen",
+        "xanh"
+      ],
+      "image_url": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/06/dep_nu_banh_mi1.jpg"
+    },
+    {
+      "id": "A004",
+      "category": "accessory",
+      "subcategory": "Giày thời trang",
+      "name": "Giày thể thao ô bông tuyết kiểu dáng Hàn Quốc nữ sneaker",
+      "description": "Kiểu Dáng: Thể thao nữ ô tuyết dạ kiểu dáng thời trang nữ. Size: 35-36-37-38-39. Hàng Việt Nam phong cách hàng dễ phối đồ tiện cho đi làm, đi chơi, đi dã ngoại. Màu sắc: Trắng phối kẻ. Mẫu lười này phom chuẩn các cậu ạ nên các cậu đi chuẩn cỡ nha cảm ơn các cậu nhiều ạ",
+      "price": 100000,
+      "sale_price": 52000,
+      "stock": 200,
+      "size": [
+        "35",
+        "36",
+        "37",
+        "38",
+        "39"
+      ],
+      "color": [
+        "Đen",
+        "Trắng"
+      ],
+      "image_url": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/06/giay_the_thao_o1.jpg"
+    },
+    {
+      "id": "3768",
+      "category": "accessory",
+      "subcategory": "Mũ thời trang",
+      "name": "Mũ lưỡi trai nữ mũ bóng chày màu nâu đầu cứng chống nắng",
+      "description": "Đặc tính: Mũ có thiết kế có thể điều chỉnh, có thể dễ dàng thích ứng với những người có chu vi vòng đầu khác nhau.\nNó là thời trang và độc đáo, và có thể phù hợp với tất cả các loại quần áo.\nCho dù bạn đang mua sắm, đi dạo trong công viên hay tham dự một lễ hội âm nhạc ngoài trời, đó là một sự lựa chọn tuyệt vời.",
+      "price": 52000,
+      "sale_price": 0,
+      "stock": 200,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Xám",
+        "Nâu",
+        "Đen",
+        "Đỏ"
+      ],
+      "image_url": "http://cuongkhoashop.unaux.com/wp-content/uploads/2024/06/mu_luoi_trai_nu1.jpg"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+<div class="container">
+  <h2 class="text-center my-3">Danh sách sản phẩm</h2>
+
+  <label for="productType">Loại sản phẩm</label>
+  <select
+    [(ngModel)]="productType"
+    (change)="loadProductData()"
+    class="form-control my-3"
+  >
+    <option value="" disabled selected>Chọn loại sản phẩm</option>
+    <option value="men">Thời trang nam</option>
+    <option value="women">Thời trang nữ</option>
+    <option value="accessory">Phụ kiện</option>
+  </select>
+
+  <table class="table table-hover mt-3" *ngIf="products.length > 0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Subcategory</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Sale Price</th>
+        <th>Stock</th>
+        <th>Image</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.subcategory }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price | number : "1.0-0" }} đ</td>
+        <td>{{ product.sale_price | number : "1.0-0" }} đ</td>
+        <td>{{ product.stock }}</td>
+        <td>
+          <img [src]="product.image_url" alt="{{ product.name }}" width="50" />
+        </td>
+        <td>
+          <button
+            [routerLink]="['/product-edit', product.id]"
+            class="btn btn-primary me-3"
+          >
+            Sửa
+          </button>
+          <button class="btn btn-danger" (click)="onDelete(product.id)">
+            Xóa
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button
+    routerLink="/home-admin"
+    class="btn btn-success mb-3 d-flex align-items-center justify-content-center"
+  >
+    Quay lại trang chủ<i class="bx bx-log-in fs-5 ms-1"></i>
+  </button>
+
+  <div *ngIf="products.length === 0" class="text-center">
+    <p>Không có sản phẩm nào.</p>
+  </div>
+</div>

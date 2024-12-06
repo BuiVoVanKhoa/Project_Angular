@@ -1,0 +1,202 @@
+<div class="container">
+  <form [formGroup]="productFormCreate" (ngSubmit)="onCreate()">
+    <h1 class="my-2 text-center">Thêm sản phẩm</h1>
+
+    <div class="form-group my-3">
+      <label for="category">Danh mục</label>
+      <select class="form-control" formControlName="category">
+        <option value="">Chọn danh mục</option>
+        <option value="men">Thời trang nam</option>
+        <option value="women">Thời trang nữ</option>
+        <option value="accessory">Phụ kiện</option>
+      </select>
+      <div
+        *ngIf="
+          productFormCreate.get('category')?.invalid &&
+          productFormCreate.get('category')?.touched
+        "
+      >
+        <small class="text-danger">Vui lòng chọn danh mục</small>
+      </div>
+    </div>
+
+    <div class="form-group my-3">
+      <label for="subcategory">Phân loại</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="subcategory"
+        placeholder="Nhập phân loại sản phẩm"
+      />
+      <div
+        *ngIf="
+          productFormCreate.get('subcategory')?.invalid &&
+          productFormCreate.get('subcategory')?.touched
+        "
+      >
+        <small class="text-danger">Phân loại là bắt buộc</small>
+      </div>
+    </div>
+
+    <div class="form-group my-3">
+      <label for="name">Tên sản phẩm</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="name"
+        placeholder="Nhập tên sản phẩm"
+      />
+      <div
+        *ngIf="
+          productFormCreate.get('name')?.invalid &&
+          productFormCreate.get('name')?.touched
+        "
+      >
+        <small class="text-danger">Tên sản phẩm là bắt buộc</small>
+      </div>
+    </div>
+
+    <div class="form-group my-3">
+      <label for="description">Mô tả</label>
+      <textarea
+        class="form-control"
+        formControlName="description"
+        rows="3"
+        placeholder="Nhập mô tả sản phẩm"
+      ></textarea>
+      <div
+        *ngIf="
+          productFormCreate.get('description')?.invalid &&
+          productFormCreate.get('description')?.touched
+        "
+      >
+        <small class="text-danger">Mô tả là bắt buộc</small>
+      </div>
+    </div>
+
+    <div class="form-group my-3">
+      <label for="price">Giá</label>
+      <input
+        type="number"
+        class="form-control"
+        formControlName="price"
+        placeholder="Nhập giá"
+      />
+      <div
+        *ngIf="
+          productFormCreate.get('price')?.invalid &&
+          productFormCreate.get('price')?.touched
+        "
+      >
+        <small class="text-danger">Giá là bắt buộc và phải lớn hơn 0</small>
+      </div>
+    </div>
+
+    <div class="form-group my-3">
+      <label for="sale_price">Giá khuyến mãi</label>
+      <input
+        type="number"
+        class="form-control"
+        formControlName="sale_price"
+        placeholder="Nhập giá khuyến mãi"
+      />
+      <div
+        *ngIf="
+          productFormCreate.get('sale_price')?.invalid &&
+          productFormCreate.get('sale_price')?.touched
+        "
+      >
+        <small class="text-danger"
+          >Giá khuyến mãi phải lớn hơn hoặc bằng 0</small
+        >
+      </div>
+    </div>
+
+    <div class="form-group my-3">
+      <label for="stock">Số lượng trong kho</label>
+      <input
+        type="number"
+        class="form-control"
+        formControlName="stock"
+        placeholder="Nhập số lượng trong kho"
+      />
+      <div
+        *ngIf="
+          productFormCreate.get('stock')?.invalid &&
+          productFormCreate.get('stock')?.touched
+        "
+      >
+        <small class="text-danger"
+          >Số lượng là bắt buộc và phải lớn hơn 0</small
+        >
+      </div>
+    </div>
+
+    <div class="form-group my-3">
+      <label for="size">Size (phân cách bằng dấu phẩy)</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="size"
+        placeholder="VD: S, M, L, XL"
+      />
+      <div
+        *ngIf="
+          productFormCreate.get('size')?.invalid &&
+          productFormCreate.get('size')?.touched
+        "
+      >
+        <small class="text-danger">Size là bắt buộc</small>
+      </div>
+    </div>
+
+    <div class="form-group my-3">
+      <label for="color">Màu sắc (phân cách bằng dấu phẩy)</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="color"
+        placeholder="VD: Đen, Trắng, Xanh"
+      />
+      <div
+        *ngIf="
+          productFormCreate.get('color')?.invalid &&
+          productFormCreate.get('color')?.touched
+        "
+      >
+        <small class="text-danger">Màu sắc là bắt buộc</small>
+      </div>
+    </div>
+
+    <div class="form-group my-3">
+      <label for="image_url">URL hình ảnh</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="image_url"
+        placeholder="Nhập URL hình ảnh"
+      />
+      <div
+        *ngIf="
+          productFormCreate.get('image_url')?.invalid &&
+          productFormCreate.get('image_url')?.touched
+        "
+      >
+        <small class="text-danger">URL hình ảnh là bắt buộc</small>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between mb-3">
+      <button
+        type="submit"
+        class="btn btn-success"
+        [disabled]="!productFormCreate.valid"
+      >
+        Thêm sản phẩm
+      </button>
+      <button type="button" class="btn btn-secondary d-flex align-items-center justify-content-center" routerLink="/home-admin">
+        Quay lại trang chủ<i class="bx bx-log-in fs-5 ms-1"></i>
+      </button>
+    </div>
+  </form>
+</div>

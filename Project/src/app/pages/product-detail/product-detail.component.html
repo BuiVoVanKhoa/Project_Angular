@@ -1,0 +1,90 @@
+<div class="container my-4" *ngIf="product">
+  <div class="row">
+    <!-- Hình ảnh sản phẩm -->
+    <div class="col-lg-6 col-md-6">
+      <img class="w-100" [src]="product.image_url" [alt]="product.name" />
+    </div>
+
+    <!-- Thông tin chi tiết sản phẩm -->
+    <div class="col-lg-6 col-md-6">
+      <h1 class="fs-3 fw-bold">{{ product.name }}</h1>
+      <p class="text-muted">
+        {{ getCategoryDisplay(product.category) }} > {{ product.subcategory }}
+      </p>
+      <hr class="w-50" />
+
+      <!-- Hiển thị giá và giá giảm nếu có -->
+      <div *ngIf="product.sale_price > 0 && product.sale_price < product.price" class="d-flex align-items-center gap-3">
+        <h1 class="fs-4 text-danger">{{ product.sale_price | number:'1.0-0' }} đ</h1>
+        <del class="text-muted">{{ product.price | number:'1.0-0' }} đ</del>
+      </div>
+      <div *ngIf="!(product.sale_price > 0 && product.sale_price < product.price)">
+        <h1 class="fs-4">{{ product.price | number:'1.0-0' }} đ</h1>
+      </div>
+
+      <!-- Lựa chọn màu sắc -->
+      <div class="d-flex align-items-center mt-3">
+        <h1 class="fs-5 me-3">Màu sắc</h1>
+        <select class="form-select w-50" [(ngModel)]="selectedColor">
+          <option value="">Chọn màu sắc</option>
+          <option *ngFor="let color of product.color" [value]="color">
+            {{ color }}
+          </option>
+        </select>
+      </div>
+
+      <!-- Lựa chọn kích cỡ -->
+      <div class="d-flex align-items-center mt-3">
+        <h1 class="fs-5 me-5">Size</h1>
+        <select class="form-select w-50" [(ngModel)]="selectedSize">
+          <option value="">Chọn size</option>
+          <option *ngFor="let size of product.size" [value]="size">
+            {{ size }}
+          </option>
+        </select>
+      </div>
+
+      <!-- Lựa chọn số lượng sản phẩm -->
+      <div class="d-flex align-items-center mt-3">
+        <h1 class="fs-5 me-3">Số lượng</h1>
+        <div class="input-group w-25">
+          <button class="btn btn-outline-secondary" type="button" (click)="updateQuantity(-1)">-</button>
+          <input type="number" class="form-control text-center" [value]="quantity" readonly />
+          <button class="btn btn-outline-secondary" type="button" (click)="updateQuantity(1)">+</button>
+        </div>
+        <small class="ms-2 text-muted">(Còn {{ product.stock }} sản phẩm)</small>
+      </div>
+
+      <!-- Nút Thêm vào giỏ hàng và Mua ngay -->
+      <div class="d-flex align-items-center mt-4">
+        <button class="btn btn-success me-4" (click)="addToCart()">Thêm vào giỏ hàng</button>
+        <button class="btn btn-danger" (click)="addToCart()">Mua ngay</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Giới thiệu sản phẩm và thông tin bổ sung -->
+  <div class="mt-4">
+    <h1 class="fs-5 fw-bold">Giới thiệu về sản phẩm</h1>
+    <p>{{ product.description }}</p>
+
+    <h1 class="fs-5 fw-bold">Cam kết từ Shop</h1>
+    <ul>
+      <li>Hàng thật 100% như hình.</li>
+      <li>Giao hàng đúng mẫu mã, size màu khách đặt.</li>
+      <li>Tất cả sản phẩm giao hàng COD toàn quốc.</li>
+    </ul>
+
+    <h1 class="fs-5 fw-bold">Hướng dẫn bảo quản</h1>
+    <ul>
+      <li>Giặt những sản phẩm cùng gam màu với nhau lần giặt đầu tiên.</li>
+      <li>
+        Giặt ở nhiệt độ bình thường, đồ có màu đậm như: đen, xanh đen, đỏ, tím…
+        nên giặt riêng 1-2 nước đầu.
+      </li>
+      <li>Hạn chế dùng chất tẩy đậm đặc.</li>
+      <li>Ủi và sấy ở nhiệt độ thích hợp.</li>
+      <li>Khuyến khích lộn mặt trái khi phơi để giữ sản phẩm bền màu hơn.</li>
+    </ul>
+  </div>
+</div>

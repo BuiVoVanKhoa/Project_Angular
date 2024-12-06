@@ -1,0 +1,91 @@
+/* Danh mục */
+.list-unstyled li{
+    margin-bottom: 4px;
+}
+
+/* Fashion */
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-text {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.title-line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #e0e0e0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.see-more {
+    font-size: 18px;
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.see-more:hover {
+    text-decoration: underline;
+}
+
+.product-card {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+.product-image {
+    width: 100%;
+    height: auto;
+}
+.product-name {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+.product-subcategory {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.product-price {
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 5px;
+}
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 14px;
+}
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f06c64;
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.wishlist-link {
+    display: block;
+    margin-top: 10px;
+    color: #0d6efd;
+    text-decoration: none;
+    font-size: 12px;
+}
+.wishlist-link:hover {
+    text-decoration: underline;
+}
+.stars {
+    color: orange;
+    font-size: 14px;
+}

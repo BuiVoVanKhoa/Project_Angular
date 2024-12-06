@@ -1,0 +1,158 @@
+<!-- Banner -->
+<div class="banner" *ngFor="let bn of banners">
+  <img [src]="bn.imageUrl" alt="" class="banner-image img-fluid" />
+</div>
+
+<!-- Featured categories -->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <div class="title-container">
+        <div class="title-line"></div>
+        <div class="title-text">DANH MỤC NỔI BẬT</div>
+        <div class="title-line"></div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="category-item" routerLink="/men-fashion">
+        <img src="../Images/thoi_trang_nam.jpg" alt="Thời trang nam" />
+        <div class="category-overlay">
+          <div class="category-title text-center">
+            Thời trang nam
+            <p class="fw-normal fs-6 d-none d-lg-block">
+              {{ productsMen.length }} sản phẩm
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="category-item" routerLink="/women-fashion">
+        <img src="../Images/thoi_trang_nu.jpg" alt="Thời trang nữ" />
+        <div class="category-overlay">
+          <div class="category-title text-center">
+            Thời trang nữ
+            <p class="fw-normal fs-6 d-none d-lg-block">
+              {{ productsWomen.length }} sản phẩm
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="category-item" routerLink="/accessories">
+        <img src="../Images/phu_kien.jpg" alt="Phụ kiện" />
+        <div class="category-overlay">
+          <div class="category-title text-center">
+            Phụ kiện
+            <p class="fw-normal fs-6 d-none d-lg-block">
+              {{ accessories.length }} sản phẩm
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Men's fashion -->
+<div class="container mt-4">
+  <div class="d-flex align-items-center justify-content-between mt-4">
+    <h5 class="fw-bold mb-0">THỜI TRANG NAM</h5>
+    <a routerLink="/men-fashion" class="text-decoration-none">Xem thêm &gt;</a>
+  </div>
+  <hr class="mt-1 mb-4" style="border-top: 2px solid #8e8e8e" />
+  <div class="row">
+    <div class="col-lg-3 col-md-6" *ngFor="let bn of productsMen | slice : 0 : 4">
+      <div class="product-card">
+        <img routerLink="/product-detail/{{ bn.id }}" [src]="bn.image_url" alt="" class="product-image img-fluid" />
+        <div class="product-name fw-bold fs-6 text-danger mt-2">
+          {{ bn.subcategory }}
+        </div>
+        <div class="product-title">{{ bn.name }}</div>
+        <div class="stars">★★★★★</div>
+        <div *ngIf="bn.sale_price > 0 && bn.sale_price < bn.price" class="product-price my-2">
+          <span class="text-danger pe-2">{{ bn.sale_price | number:'1.0-0' }} đ</span>
+          <del class="text-muted">{{ bn.price | number:'1.0-0' }} đ</del>
+        </div>
+        <div *ngIf="!(bn.sale_price > 0 && bn.sale_price < bn.price)" class="product-price my-2">
+          <span>{{ bn.price | number:'1.0-0' }} đ</span>
+        </div>
+        <!-- Nút thêm vào giỏ hàng gọi hàm addToCart -->
+        <a class="text-decoration-none btn btn-success mx-2" (click)="addToCart(bn)">
+          Thêm vào giỏ hàng
+        </a>
+        <a class="text-decoration-none btn btn-danger" (click)="addToCart(bn)">Mua ngay</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Women's fashion -->
+<div class="container mt-4">
+  <div class="d-flex align-items-center justify-content-between mt-4">
+    <h5 class="fw-bold mb-0">THỜI TRANG NỮ</h5>
+    <a routerLink="/women-fashion" class="text-decoration-none">Xem thêm &gt;</a>
+  </div>
+  <hr class="mt-1 mb-4" style="border-top: 2px solid #8e8e8e" />
+  <div class="row">
+    <div class="col-lg-3 col-md-6" *ngFor="let bn of productsWomen | slice : 0 : 4">
+      <div class="product-card">
+        <img routerLink="/product-detail/{{ bn.id }}" [src]="bn.image_url" alt="" class="product-image img-fluid" />
+        <div class="product-name fw-bold fs-6 text-danger mt-2">
+          {{ bn.subcategory }}
+        </div>
+        <div class="product-title">{{ bn.name }}</div>
+        <div class="stars">★★★★★</div>
+        <div *ngIf="bn.sale_price > 0 && bn.sale_price < bn.price" class="product-price my-2">
+          <span class="text-danger pe-2">{{ bn.sale_price | number:'1.0-0' }} đ</span>
+          <del class="text-muted">{{ bn.price | number:'1.0-0' }} đ</del>
+        </div>
+        <div *ngIf="!(bn.sale_price > 0 && bn.sale_price < bn.price)" class="product-price my-2">
+          <span>{{ bn.price | number:'1.0-0' }} đ</span>
+        </div>
+        <!-- Nút thêm vào giỏ hàng gọi hàm addToCart -->
+        <a class="text-decoration-none btn btn-success mx-2" (click)="addToCart(bn)">
+          Thêm vào giỏ hàng
+        </a>
+        <a class="text-decoration-none btn btn-danger" (click)="addToCart(bn)">Mua ngay</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Accessory -->
+<div class="container mt-4">
+  <div class="d-flex align-items-center justify-content-between mt-4">
+    <h5 class="fw-bold mb-0">PHỤ KIỆN</h5>
+    <a routerLink="/accessories" class="text-decoration-none">Xem thêm &gt;</a>
+  </div>
+  <hr class="mt-1 mb-4" style="border-top: 2px solid #8e8e8e" />
+  <div class="row">
+    <div class="col-lg-3 col-md-6" *ngFor="let bn of accessories | slice : 0 : 4">
+      <div class="product-card">
+        <img routerLink="/product-detail/{{ bn.id }}" [src]="bn.image_url" alt="" class="product-image img-fluid" />
+        <div class="product-name fw-bold fs-6 text-danger mt-2">
+          {{ bn.subcategory }}
+        </div>
+        <div class="product-title">{{ bn.name }}</div>
+        <div class="stars">★★★★★</div>
+        <div *ngIf="bn.sale_price > 0 && bn.sale_price < bn.price" class="product-price my-2">
+          <span class="text-danger pe-2">{{ bn.sale_price | number:'1.0-0' }} đ</span>
+          <del class="text-muted">{{ bn.price | number:'1.0-0' }} đ</del>
+        </div>
+        <div *ngIf="!(bn.sale_price > 0 && bn.sale_price < bn.price)" class="product-price my-2">
+          <span>{{ bn.price | number:'1.0-0' }} đ</span>
+        </div>
+        <!-- Nút thêm vào giỏ hàng gọi hàm addToCart -->
+        <a class="text-decoration-none btn btn-success mx-2" (click)="addToCart(bn)">
+          Thêm vào giỏ hàng
+        </a>
+        <a class="text-decoration-none btn btn-danger" (click)="addToCart(bn)">Mua ngay</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,173 @@
+<div class="container">
+  <!-- Header với tiêu đề và thanh tìm kiếm -->
+  <div class="cart-header">
+    <h2>Giỏ hàng của bạn</h2>
+    <input type="text" placeholder="Tìm kiếm sản phẩm..." [(ngModel)]="searchTerm" (input)="filterProducts()"
+      class="search-input" />
+  </div>
+
+  <!-- Nếu giỏ hàng có sản phẩm -->
+  <div *ngIf="filteredCart.length > 0; else emptyCart">
+    <div *ngFor="let product of filteredCart" class="cart-item">
+      <!-- Checkbox chọn sản phẩm -->
+      <input type="checkbox" [(ngModel)]="product.selected" (change)="calculateTotal()" />
+      <!-- Ảnh sản phẩm -->
+      <div class="product-image-container">
+        <img [src]="product.image_url" alt="Product Image" class="product-image img-fluid" />
+      </div>
+      <!-- Thông tin sản phẩm -->
+      <div class="product-info">
+        <p>{{ product.name }}</p>
+      </div>
+      <!-- Giá sản phẩm -->
+      <div class="product-price">
+        <p>{{ product.price | number:'1.0-0' }} đ</p>
+      </div>
+      <!-- Số lượng và nút điều chỉnh -->
+      <div class="quantity-control">
+        <button (click)="decreaseQuantity(product)">-</button>
+        <span>{{ product.quantity }}</span>
+        <button (click)="increaseQuantity(product)">+</button>
+      </div>
+      <!-- Cột Tổng tiền cho từng sản phẩm -->
+      <div class="product-total">
+        <p>{{ product.price * product.quantity | number:'1.0-0' }} đ</p>
+      </div>
+      <!-- Nút Xóa sản phẩm -->
+      <div class="remove-button">
+        <button (click)="removeProduct(product)" class="btn btn-danger">
+          Xóa
+        </button>
+      </div>
+    </div>
+
+    <div class="tongtien">
+      <!-- Checkbox chọn tất cả sản phẩm -->
+      <div class="select-all">
+        <input type="checkbox" [checked]="isAllSelected()" (change)="toggleSelectAll()" />
+        <label style="font-size: 1.5rem">Chọn tất cả</label>
+      </div>
+
+      <!-- Phần nhập mã giảm giá -->
+      <div class="voucher-section">
+        <label style="font-size: 1.2rem">Chọn mã giảm giá</label>
+        <!-- Dropdown chọn mã giảm giá -->
+        <select [(ngModel)]="voucherCode" class="voucher-select">
+          <option value="" disabled selected>Chọn mã giảm giá</option>
+          <option *ngFor="let voucher of availableVouchers" [value]="voucher.code">
+            {{ voucher.code }}
+          </option>
+        </select>
+        <!-- Nút Áp dụng mã giảm giá -->
+        <button (click)="applyVoucher()" class="btn btn-danger">Áp dụng</button>
+      </div>
+
+      <!-- Hiển thị tổng tiền cho các sản phẩm đã chọn -->
+      <div class="total-amount">
+        <h3>
+          Tổng tiền:
+          {{
+          totalAmount - shippingFee |
+          number:'1.0-0' }} đ
+        </h3>
+      </div>
+
+      <!-- Nút Mua Hàng -->
+      <div class="purchase-button">
+        <button (click)="checkout()" class="btn btn-primary">Mua Hàng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hiển thị form thanh toán dưới dạng pop-up modal khi người dùng bấm "Mua Hàng" -->
+  <div *ngIf="isCheckoutVisible" class="checkout-modal">
+    <div class="checkout-modal-content">
+      <h3>Thông tin thanh toán</h3>
+      <form #checkoutForm="ngForm">
+        <div class="form-group">
+          <label for="name">Họ và tên</label>
+          <input type="text" id="name" class="form-control" placeholder="Nhập họ và tên" [(ngModel)]="customerName"
+            name="customerName" required />
+          <div *ngIf="checkoutForm.submitted && !customerName" class="text-danger">
+            Vui lòng nhập họ và tên.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Địa chỉ giao hàng</label>
+          <input type="text" id="address" class="form-control" placeholder="Nhập địa chỉ giao hàng"
+            [(ngModel)]="customerAddress" name="customerAddress" required />
+          <div *ngIf="checkoutForm.submitted && !customerAddress" class="text-danger">
+            Vui lòng nhập địa chỉ giao hàng.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Số điện thoại</label>
+          <input type="text" id="phone" class="form-control" placeholder="Nhập số điện thoại"
+            [(ngModel)]="customerPhone" name="customerPhone" required />
+          <div *ngIf="checkoutForm.submitted && !customerPhone" class="text-danger">
+            Vui lòng nhập số điện thoại.
+          </div>
+        </div>
+
+        <!-- Phương thức thanh toán -->
+        <div class="form-group">
+          <label>Phương thức thanh toán</label><br />
+          <input type="radio" id="cashOnDelivery" name="paymentMethod" [(ngModel)]="paymentMethod"
+            value="cashOnDelivery" required />
+          <label for="cashOnDelivery">Thanh toán khi nhận hàng</label><br />
+          <input type="radio" id="creditCard" name="paymentMethod" [(ngModel)]="paymentMethod" value="creditCard"
+            required />
+          <label for="creditCard">Thẻ tín dụng/Ghi nợ</label>
+          <div *ngIf="checkoutForm.submitted && !paymentMethod" class="text-danger">
+            Vui lòng chọn phương thức thanh toán.
+          </div>
+        </div>
+
+        <!-- Hiển thị thêm thông tin về thẻ tín dụng khi chọn "Thẻ tín dụng" -->
+        <div *ngIf="paymentMethod === 'creditCard'" class="form-group">
+          <label for="creditCardNumber">Số thẻ tín dụng</label>
+          <input type="text" id="creditCardNumber" class="form-control" placeholder="Nhập số thẻ tín dụng"
+            [(ngModel)]="creditCardNumber" name="creditCardNumber" required />
+          <div *ngIf="checkoutForm.submitted && !creditCardNumber" class="text-danger">
+            Vui lòng nhập số thẻ tín dụng.
+          </div>
+        </div>
+
+        <!-- Thông tin chi phí -->
+        <div class="total-amount">
+          <h6>
+            Tổng tiền hàng:
+            {{
+            totalAmount - shippingFee
+            | currency : "VND" : "symbol-narrow" : "1.0-0"
+            }}
+          </h6>
+          <h6>
+            Phí vận chuyển:
+            {{ shippingFee | currency : "VND" : "symbol-narrow" : "1.0-0" }}
+          </h6>
+          <h5 class="text-primary">
+            Tổng thanh toán:
+            {{ totalAmount | currency : "VND" : "symbol-narrow" : "1.0-0" }}
+          </h5>
+        </div>
+
+        <!-- Nút Xác nhận thanh toán -->
+        <button (click)="confirmPayment(checkoutForm)" [disabled]="checkoutForm.invalid" class="btn btn-primary mt-3">
+          Xác nhận đặt hàng
+        </button>
+      </form>
+
+      <!-- Nút quay lại giỏ hàng -->
+      <button (click)="goBackToCart()" class="btn btn-secondary mt-3">
+        Quay lại giỏ hàng
+      </button>
+    </div>
+  </div>
+
+  <ng-template #emptyCart>
+    <p>Giỏ hàng của bạn đang trống.</p>
+  </ng-template>
+</div>

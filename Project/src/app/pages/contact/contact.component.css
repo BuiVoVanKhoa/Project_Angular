@@ -1,0 +1,27 @@
+.form-section {
+  background-color: #1f6f5e;
+  color: white;
+  padding: 30px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control,
+.btn {
+  border-radius: 0;
+}
+.form-section h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+.btn-block {
+  background-color: #5d6d7e;
+  color: white;
+  font-weight: bold;
+}
+.btn-block:hover {
+  background-color: #3d4a58;
+}
