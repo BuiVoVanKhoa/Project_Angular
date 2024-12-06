@@ -43,17 +43,25 @@ Tôi đảm nhiệm vai trò chính là lập trình giao diện và phát tri�
   
 <b> Cài đặt </b>
 1. Clone dự án: <br>
+``` bash
 git clone https://github.com/BuiVoVanKhoa/Project_Angular.git  
 cd Project_Angular
+```
 
 2. Cài đặt các gói phụ thuộc: <br>
+``` bash
 npm install
+```
 
 <b> Chạy dự án </b>
 1. Chạy lệnh để khởi động server:  <br>
-ng serve  
+``` bash
+ng serve
+```
 2. Mở trình duyệt và truy cập:  <br>
+``` arduino
 http://localhost:4200
+```
 
 ## Thông tin liên hệ
 - Họ và Tên: Bùi Võ Văn Khoa
