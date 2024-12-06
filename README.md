@@ -65,7 +65,7 @@ http://localhost:4200
 
 ## Thông tin liên hệ
 - Họ và Tên: Bùi Võ Văn Khoa
-- GitHub: BuiVoVanKhoa
+- GitHub: [BuiVoVanKhoa](https://github.com/BuiVoVanKhoa)
 
 ## Ghi chú
 - Dự án có thể được cập nhật thêm tính năng trong tương lai.
